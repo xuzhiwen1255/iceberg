@@ -107,6 +107,7 @@ class IcebergStreamWriter<T> extends AbstractStreamOperator<WriteResult>
       return;
     }
 
+    //
     long startNano = System.nanoTime();
     WriteResult result = writer.complete();
     writerMetrics.updateFlushResult(result);
